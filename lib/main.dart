@@ -55,7 +55,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       routes: {
         '/profile': (context) => const ProfileScreen(),
-        '/register': (context) => RegistrationScreen(),
+        '/register': (context) => const RegistrationScreen(),
       },
       title: 'appName',
       theme: ThemeData(

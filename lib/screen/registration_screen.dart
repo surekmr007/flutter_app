@@ -5,7 +5,10 @@ import 'package:flutter_app/screen/profile_screen.dart';
 import 'package:mobile_number/mobile_number.dart';
 
 class RegistrationScreen extends StatefulWidget {
+  const RegistrationScreen({super.key});
+
   @override
+  // ignore: library_private_types_in_public_api
   _RegistrationScreenState createState() => _RegistrationScreenState();
 }
 
@@ -109,7 +112,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => ProfileScreen(),
+          builder: (context) => const ProfileScreen(),
         ),
       );
     } catch (e) {
@@ -121,7 +124,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Registration Screen'),
+        title: const Text('Registration Screen'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -132,13 +135,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               TextFormField(
                 controller: _phoneNumberController,
                 keyboardType: TextInputType.phone,
-                decoration: InputDecoration(labelText: 'Enter your phone number'),
+                decoration: const InputDecoration(labelText: 'Enter your phone number'),
               ),
             if (_otpSent)
               TextFormField(
                 controller: _smsCodeController,
                 keyboardType: TextInputType.number,
-                decoration: InputDecoration(labelText: 'Enter OTP'),
+                decoration: const InputDecoration(labelText: 'Enter OTP'),
               ),
             ElevatedButton(
               onPressed: () {
